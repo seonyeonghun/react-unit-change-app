@@ -1,0 +1,50 @@
+.title-text {
+  background: darkslateblue
+}
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: white;
+}
+.info {
+  text-indent: 1rem;
+  background: rgb(241, 241, 241);
+  border-bottom: 1px solid rgb(95, 95, 95);
+}
+
+.my-0 {
+  margin: 0 auto;
+}
+.my-1 {
+  margin: 1rem auto;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+
+.form-wrap {
+  max-width: 1190px;
+}
+.input-wrap {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  height: 40px;
+}
+[type=number] {
+  text-indent: 1rem;
+}
+
+.owner {
+  background: rgb(70, 68, 68);
+}
+.fixed {
+  position: fixed
+}
+.w100 {
+  width: 100vw;
+}
+.bottom0 {
+  bottom: 0;
+}
