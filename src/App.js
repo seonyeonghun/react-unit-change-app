@@ -2,51 +2,33 @@ import './App.css';
 import './Rwd.css';
 
 import {useState} from 'react';
+import CmToInch from './component/CmToInch';
+import MinutesToHours from './component/MinutesToHours';
+import KmToMiles from './component/KmtoMiles';
 
-function App() {
-  const [centimeter, setCentimeter] = useState("0");
-  const [inch, setInch] = useState("0");
-  const [status, setStatus] = useState(true);
-  // centimer 변수, setCentimeter 수정함수(=centimeter 변수의 값을 업데이트 & App 컴포넌트를 재 렌더링)
-  const handleCentimeter = (e) => {
-    setCentimeter(e.target.value); // cm 입력폼의 수정된 값으로 centimeter 변수 업데이트
-  }
-  const handleInch = (e) => {
-    setInch(e.target.value); // cm 입력폼의 수정된 값으로 centimeter 변수 업데이트
-  }
-  const handleSubmit = (e) => {
-    e.preventDefault(); // 이벤트 전파를 막는 메소드 (폼 이벤트 submit 새로고침을 금지)
-  }
-  const resetInput = () => {
-    setCentimeter("값을 입력하세요");
-    setInch("변환된 값이 표시됩니다");
-  }
-  const switchInput = () => {
-    setStatus(!status);
+
+function App(){
+  const [index, setIndex] = useState("0");
+  const [img, setImg] = useState(["CmToInch","KmToMiles","MinutesToHours"])
+  const onSelect= (e) => {
+    setIndex(e.target.value);
+    console.log(img[index])
   }
   return (
     <div className="App">
-      <h1 className="title-text text-center text-white my-0 py-1">단위 환산</h1>
-      {/* cm를 2.54로 나누면 inch, inch를 2.54 곱하면 cm */}
-      <p className="info py-1 my-0">cm를 inch로 환산하는 앱</p>
-      <div className="form-wrap my-1">
-        <form onSubmit={handleSubmit}>
-          <div className="input-wrap">
-            <label>
-              <input type="number" value={centimeter} onChange={handleCentimeter} placeholder="센티미터(cm)를 입력하세요" disabled={!status} />cm
-            </label>
-            <label>
-              <input type="number" value={inch} onChange={handleInch} placeholder="인치(inch)로 환산됩니다." disabled={status} />inch
-            </label>
-            <input type="submit" value="환산하기" />
-            <input type="reset" onClick={resetInput} value="초기화" />
-            <input type="button" onClick={switchInput} value="입력반전" />
-          </div>
-        </form>
+      <h1 className="App-title text-white text-center my-0 py-1 cap">Unit Covert - 단위 변환기</h1>
+      <div className="info py-1 d-flex justify-center">
+        <select value={index} onChange={onSelect}>
+          <option value="0">Centimeter &amp; Inch</option>
+          <option value="1">Minutes &amp; Hours</option>
+          <option value="2">Kilometer &amp; Miles</option>
+        </select>
       </div>
-      <p className="owner text-center text-white py-1 fixed w100 bottom0">&copy; hanul.</p>
+      {index === "0" ? <CmToInch ratio={2.54} /> : null }
+      {index === "1" ? <MinutesToHours ratio={60} /> : null }
+      {index === "2" ? <KmToMiles ratio={1.609} /> : null }
     </div>
-  );
+  )
 }
 
 export default App;

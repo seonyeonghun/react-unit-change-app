@@ -1,0 +1,22 @@
+@media screen and (max-width: 475px) {
+    .input-wrap {
+        flex-direction: column;
+        height: auto
+    }
+    .input-wrap > fieldset {
+        flex-direction: column
+    }
+    [type=text] {
+        width: 100%;
+    }
+    [type=text],[type=button],[type=reset] {
+        height: 40px;
+        margin-bottom: .5rem
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .form-wrap{
+        margin: 0 auto;
+    }
+}

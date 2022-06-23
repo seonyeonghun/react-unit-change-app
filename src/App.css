@@ -1,4 +1,4 @@
-.title-text {
+.App-title {
   background: darkslateblue
 }
 .text-center {
@@ -7,17 +7,29 @@
 .text-white {
   color: white;
 }
+.cap {
+  text-transform: capitalize;
+}
 .info {
   text-indent: 1rem;
   background: rgb(241, 241, 241);
   border-bottom: 1px solid rgb(95, 95, 95);
+}
+select {
+  height: 30px;
+  width: 150px;
 }
 
 .my-0 {
   margin: 0 auto;
 }
 .my-1 {
-  margin: 1rem auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem
+}
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .py-1 {
   padding: 1rem 0;
@@ -26,16 +38,44 @@
 .form-wrap {
   max-width: 1190px;
 }
+.brdr0 {
+  border: 0;
+}
 .input-wrap {
   display: flex;
   justify-content: center;
   column-gap: 1rem;
   height: 40px;
 }
+.d-flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.flex1 {
+  flex: 1
+}
+.flex2 {
+  flex: 2
+}
+.flex3 {
+  flex: 3
+}
+.gap1 {
+  column-gap: 1rem;
+}
 [type=number] {
   text-indent: 1rem;
 }
-
+.d-none {display: none}
+.object-fit {
+  object-fit: cover;
+  max-width: 100%;
+}
 .owner {
   background: rgb(70, 68, 68);
 }
