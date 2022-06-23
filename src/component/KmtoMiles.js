@@ -27,10 +27,10 @@ function KmToMiles({ratio}) {
           <div className="input-wrap">
             <fieldset className="brdr0 flex3 d-flex space-between">
             <label className="flex1">
-              <input type="text" value={status ? amount*ratio : amount} onChange={handleChange} placeholder="센티미터(cm)를 입력하세요" disabled={status} />kilometer
+              <input type="text" value={status ? amount*ratio : amount} onChange={handleChange} placeholder="값을 입력하세요!" disabled={status} />kilometer
             </label>
             <label className="flex1">
-              <input type="text" value={!status ? amount/ratio: amount} onChange={handleChange} placeholder="인치(inch)로 환산됩니다." disabled={!status} />miles
+              <input type="text" value={!status ? amount/ratio: amount} onChange={handleChange} placeholder="값을 입력하세요!" disabled={!status} />miles
             </label>
             </fieldset>
             <fieldset className="brdr0 flex1 d-flex gap1">
