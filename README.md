@@ -19,3 +19,4 @@
 2. npm install (package.json의 dependencies 관련 모듈 설치)
 3. npm start
 4. heroku 연동 & 본인계정으로 로그인 후 배포
+5. [확인하기](https://converter-unit.herokuapp.com)
